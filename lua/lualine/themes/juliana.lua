@@ -24,7 +24,7 @@ return {
     },
     command = {
         a = { fg = colors.fg2, bg = colors.yellow2 },
-        b = { fg = colors.yellow2, bg = color.fg1 },
+        b = { fg = colors.yellow2, bg = colors.fg1 },
     },
     terminal = {
         a = { fg = colors.fg2, bg = colors.magenta },
