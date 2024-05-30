@@ -69,7 +69,7 @@ vim.cmd "colorscheme juliana"
 
 - [Lazy](https://github.com/folke/lazy.nvim)
 
-````lua
+```lua
 {
   "pojokcodeid/nvim-juliana",
   lazy = false,
@@ -87,7 +87,8 @@ vim.cmd "colorscheme juliana"
       end,
     })
   end,
-}```
+}
+```
 
 <details>
 <summary><h2>🛠 Configuration</h2></summary>
@@ -122,7 +123,7 @@ vim.cmd "colorscheme juliana"
     yellow3      = '#ee932b',
   }
 }
-````
+```
 
 To get the theme's palette, you can use the `colors()` function:
 
