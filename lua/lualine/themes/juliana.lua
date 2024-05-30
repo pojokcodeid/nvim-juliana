@@ -5,7 +5,7 @@ local colors = require('nvim-juliana').colors()
 ---@param color string
 return {
     normal = {
-        a = { fg = colors.fg2, bg = '#15191D' },
+        a = { fg = colors.fg2, bg = '#242a31' },
         b = { fg = colors.fg2, bg = colors.bg1 },
         c = { fg = colors.fg1, bg = 'NONE' },
     },
