@@ -554,4 +554,6 @@ return function(colors, highlight)
     highlight('Float', { fg = C.fg4, bg = C.bg2 })
     highlight('NormalFloat', { bg = C.bg2 })
     highlight('NormalNC', { bg = C.bg2 })
+    highlight('StatusLine', { bg = colors.bg2 })
+    highlight('StatusLineNC', { bg = colors.bg2 })
 end
