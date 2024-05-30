@@ -1,4 +1,5 @@
 **NOTICE**: This project has been archived (2024-01-25).
+
 # nvim-juliana
 
 Port of Sublime's Mariana Theme for Neovim for short attention span devs with Tree-sitter support.
@@ -63,19 +64,30 @@ use { 'kaiuri/nvim-juliana',
   end
 }
 --- then
-vim.cmd 'colo juliana'
+vim.cmd "colorscheme juliana"
 ```
 
 - [Lazy](https://github.com/folke/lazy.nvim)
 
-```lua
+````lua
 {
-  'kaiuri/nvim-juliana',
+  "pojokcodeid/nvim-juliana",
   lazy = false,
-  opts = { --[=[ configuration --]=] },
-  config = true,
-}
-```
+  priority = 1000,
+  opts = {},
+  config = function()
+    vim.api.nvim_create_autocmd("ColorScheme", {
+      pattern = "*",
+      callback = function()
+        -- get colors
+        local colors = require("nvim-juliana").colors()
+        -- custom hilights
+        local hi = vim.api.nvim_set_hl
+        hi(0, "StatusLineNC", { bg = colors.bg2 })
+      end,
+    })
+  end,
+}```
 
 <details>
 <summary><h2>🛠 Configuration</h2></summary>
@@ -110,7 +122,7 @@ vim.cmd 'colo juliana'
     yellow3      = '#ee932b',
   }
 }
-```
+````
 
 To get the theme's palette, you can use the `colors()` function:
 
