@@ -1,9 +1,9 @@
 ---Generates a table of Highlight groups and their respective definitions
----from a palette of C.and a highlighting function.
+---from a palette of colors and a highlighting function.
 ---@private
----@param C.Colors # palette of colors
+---@param colors Colors # palette of colors
 ---@param highlight fun(group: string, style: table<string, any>): nil # highlighting function
-return function(C. highlight)
+return function(colors, highlight)
     local C = colors
     local default = { fg = C.fg2, bg = C.bg2 }
     local muted = { fg = C.fg3 }
@@ -537,22 +537,4 @@ return function(C. highlight)
     highlight('fzf1', { fg = C.red2, bg = C.bg3 })
     highlight('fzf2', { fg = C.red2, bg = C.bg3 })
     highlight('fzf3', { fg = C.red2, bg = C.bg3 })
-
-    highlight('FoldColumn', { bg = C.bg2 })
-    highlight('LineNr', { bg = C.bg2 })
-    highlight('ColorColumn', { bg = C.bg2, ctermbg = 1 })
-    highlight('NvimTreeNormal', { fg = C.fg2, bg = C.bg2 })
-    highlight('NvimTreeFileNew', { fg = C.green })
-    highlight('illuminatedWord', { bg = C.bg1 })
-    highlight('illuminatedCurWord', { bg = C.bg1 })
-    highlight('illuminatedWordText', { bg = C.bg1 })
-    highlight('illuminatedWordRead', { bg = C.bg1 })
-    highlight('illuminatedWordWrite', { bg = C.bg1 })
-    highlight('LspReferenceText', { bg = C.bg1 })
-    highlight('LspReferenceRead', { bg = C.bg1 })
-    highlight('LspReferenceWrite', { bg = C.bg1 })
-    highlight('FloatBorder', { fg = C.fg4, bg = C.bg2 })
-    highlight('Float', { fg = C.fg4, bg = C.bg2 })
-    highlight('NormalFloat', { bg = C.bg2 })
-    highlight('NormalNC', { bg = C.bg2 })
 end
